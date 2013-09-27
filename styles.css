@@ -43,6 +43,13 @@ body {
 	position: relative;
 }
 
+.login-form { 
+
+}
+.signup-form {
+	display: none ;
+}
+
 nav  a{
 	color: #76daff;
 	display: inline-block;
@@ -113,4 +120,26 @@ form button {
 	text-overflow: ellipsis;
 	text-decoration: none !important;
 	cursor: pointer;
+}
+.login-form .error-message {
+	color: red;
+	font-size: 1.2em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+	width: 350px;
+	height: 30px;
+	margin: 0 auto;
+	text-align: center;
+
+
+}
+.signup-form .error-message {
+	color: red;
+	font-size: 1.2em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+	width: 350px;
+	height: 30px;
+	margin: 0 auto;
+	text-align: center;
+
+
 }
