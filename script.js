@@ -71,7 +71,7 @@ $('document').ready(function() {
 		username=$('#login-email-field').val(); 
 		password=$('#login-password-field').val(); 
  
-		var myUser = codepen.user;
+		var myUser = codepen.api.login.user;
 		myUser.setLogin(username, password);
 
 		response= codepen.api.login(myUser); 
@@ -79,6 +79,7 @@ $('document').ready(function() {
 		if(!response.success) {
 			$(".error-message").html(response.error);
 		};
+		return false; 
 	});
 
 	codepen.api.signup.user = {
@@ -111,6 +112,7 @@ $('document').ready(function() {
 		email=$('#signup-email-field').val();
 		name=$ ('#signup-name-field').val();
 
+
 		var myUser = codepen.user;
 		myUser.setSignup(username, password, email, name);
 		
@@ -120,11 +122,15 @@ $('document').ready(function() {
 			$(".error-message").html(response.error);
 
 		};
-
+		return false; 
 
 	});
 
 	console.log("Yes!");
+
+	codepen.objects.NewUser= codepen.user;
+	codepen.objects.NewUser.
+
 
 });
 
